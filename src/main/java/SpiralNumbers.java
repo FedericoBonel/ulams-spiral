@@ -55,15 +55,14 @@ public class SpiralNumbers {
     }
 
     private boolean isPrime(int number) {
-        if (number == 1) return false;
-        boolean isPrime = true;
-        for(int candidate = 2; candidate < number; candidate++) {
+        if (number < 2) return false;
+        int numberSqrt = (int) Math.sqrt(number);
+        for(int candidate = 2; candidate <= numberSqrt; candidate++) {
             if (number%candidate == 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
-        return isPrime;
+        return true;
     }
 
     private String matrixToString(int[][] matrix) {

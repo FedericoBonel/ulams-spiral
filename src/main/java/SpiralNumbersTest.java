@@ -5,5 +5,6 @@ class SpiralNumbersTest {
     @Test
     public void creationTest() throws Exception {
         SpiralNumbers sn = new SpiralNumbers(11);
+        System.out.println(sn);
     }
 }
